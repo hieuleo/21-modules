@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="grid wide">
+        <div class="row">
+            <!-- analog-clock -->
+            <div class="modules c-6">
+                <div class="module-1">
+                    <!-- head -->
+                    <div class="head">
+                        <div class="heading">
+                            alarm CLOCK
+                        </div>
+                        <div class="sub-heading">
+                            The current time is:
+                        </div>
+                        <div class="smart-clock">
+                            <span class="clock-num smart-clock-hour"></span>
+                            <span class="clock-num ">:</span>
+                            <span class="clock-num smart-clock-minute"></span>
+                            <span class="clock-num">:</span>
+                            <span class="clock-num smart-clock-second"></span>
+                            <span class="clock-num midday-time"></span>
+                        </div>
+                    </div>
+                    <!-- lock -->
+                    <div class="clock">
+                        <div class="hand hour"></div>
+                        <div class="hand minute"></div>
+                        <div class="hand second"></div>
+                        <div class="number number1">1</div>
+                        <div class="number number2">2</div>
+                        <div class="number number3">3</div>
+                        <div class="number number4">4</div>
+                        <div class="number number5">5</div>
+                        <div class="number number6">6</div>
+                        <div class="number number7">7</div>
+                        <div class="number number8">8</div>
+                        <div class="number number9">9</div>
+                        <div class="number number10">10</div>
+                        <div class="number number11">11</div>
+                        <div class="number number12">12</div>
+                        <div class="text-clock">ATOMIC TIME</div>
+                        <div class="text-clock-heading">
+                            <div>LA CROSSE*</div>
+                            <span></span>
+                            <div>TECHNOLOGY</div>
+                        </div>
+                    </div>
+                    <!-- set alarm -->
+                    <div class="set-alarm">
+                        <div class="set-alarm-text">SET ALARM CLOCK: </div>
+                        <input class="set-alarm-input-hour" type="number" min="0" max="24" placeholder="Hour">
+                        <span>:</span>
+                        <input class="set-alarm-input-minute" type="number" min="0" max="59" placeholder="Minute">
+                        <div class="set">SET TIME</div>
+                    </div>
+                    <div class="alarm">
+                        ALARM: 00 : 00
+                    </div>
+                    <audio src="./audio/music.mp3" class="alarm-music"></audio>
+                    <div class="alarm-icon">
+                        <span>Alarm</span>
+                        <i class="fas fa-stopwatch"></i>
+                        <div class="alarm-close-btn">
+                            ClOSE
+                            <i class="fas fa-times"></i> 
+                        </div>
+                        <div class="alarm active">
+                            00 : 00
+                        </div>
+                        <div class="snooze">
+                            snooze
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modules c-6">
+                <div class="module">
+                    a
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script>
+        options = {
+            selectorModule: '.module-1',
+            selectorHoursAnalog: '.hour',
+            selectorMinutesAnalog: '.minute',
+            selectorSecondAnalog: '.second',
+            selectorHoursSmart: '.smart-clock-hour',
+            selectorMinutesSmart: '.smart-clock-minute',
+            selectorSecondSmart: '.smart-clock-second',
+            selectorMiddayTime: '.midday-time',
+        }
+
+    </script>
+</body>
+</html>
