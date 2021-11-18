@@ -81,13 +81,13 @@ function setTime (){
     for (let alarm of alarms){
         if(valueInputHour.value && valueInputMinute.value ){
             if (saveHour < 10 && saveMinute < 10) {
-                alarm.innerText = `ALARM: 0${saveHour} : 0${saveMinute}`
+                alarm.innerText = `ALARM: 0${saveHour} : 0${saveMinute}`;
             }else if (saveHour < 10 && saveMinute > 10){
-                alarm.innerText = `ALARM: 0${saveHour} : ${saveMinute}`
+                alarm.innerText = `ALARM: 0${saveHour} : ${saveMinute}`;
             }else if (saveHour > 10 && saveMinute < 10){
-                alarm.innerText = `ALARM: ${saveHour} : 0${saveMinute}`
+                alarm.innerText = `ALARM: ${saveHour} : 0${saveMinute}`;
             }else {
-                alarm.innerText = `ALARM: ${saveHour} : ${saveMinute}`
+                alarm.innerText = `ALARM: ${saveHour} : ${saveMinute}`;
             }
             // if (valueInputHour.value.length <2 && valueInputMinute.value.length <2){
             //     alarm.innerText = `ALARM: 0${valueInputHour.value} : 0${valueInputMinute.value}`
@@ -108,15 +108,15 @@ function saveTime(){
 }
 
 setBtn.onclick = () => {
-    saveTime()
-    setTime ()
+    saveTime();
+    setTime ();
 }
 
 // is alarm:
 alarmMusic.onpause = () => {
     heandlerAlarmMusic();
     alarmMusic.load();
-    setTime ()
+    setTime ();
 }
 
 alarmCloseBtn.onclick  = () => {
