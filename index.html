@@ -100,7 +100,7 @@
                         <input autofocus min="0" type="number" class="module-2__input" placeholder="Bill Amount" name="Bill-Amount" id="bill-amount">
                         <span class="module-2__span">$</span>
                         <label class="module-2__label" for="module-2-choose">How was your service?</label>
-                        <select class="module-2__select" name="" id="module-2-choose">
+                        <select class="module-2__select module-2__input" name="" id="module-2-choose">
                             <option class="module-2__option" disabled selected value="0">-- Choose an Option --</option>
                             <option class="module-2__option" value="0.3">30&#37; &#45; Outstanding</option>
                             <option class="module-2__option" value="0.2">20&#37; &#45; Good</option>
@@ -109,16 +109,16 @@
                             <option class="module-2__option" value="0.05">5&#37; &nbsp; &#45; Terrible</option>
                         </select>
                         <label class="module-2__label" for="many-people">How many people are sharing the bill?</label>
-                        <input min="0" type="number" class="module-2__input" placeholder="Number of People" name="Bill Amount" id="many-people">
+                        <input min="1" type="number" class="module-2__input" placeholder="Number of People" name="Bill Amount" id="many-people">
                         <span class="module-2__span">people</span>
-                        <div class="module-button">Calculate!</div>
+                        <div class="module-2__button">Calculate!</div>
                         <div class="module-2__total">
                             <div class="module-2__tip-amount">
                                 TIP AMOUNT:
                             </div>
                             <div class="module-2__tip-about">
                                 0.00
-                                <i>$</i>
+                                $
                             </div>
                         </div>
                     </div>

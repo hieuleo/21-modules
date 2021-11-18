@@ -105,12 +105,35 @@ function setTime (){
 function saveTime(){
     saveHour = Number.parseInt(valueInputHour.value);
     saveMinute = Number.parseInt(valueInputMinute.value);
+    if (!valueInputHour.value || !valueInputMinute.value || valueInputHour.value <0 || valueInputMinute.value <0) {
+        if(!valueInputHour.value || valueInputHour.value <0){
+            errorElement(valueInputHour);
+        }
+        if(!valueInputMinute.value || valueInputMinute.value <0) {
+            errorElement(valueInputMinute);
+        }else{
+            errorElement(valueInputMinute);
+            errorElement(valueInputHour);
+        }
+    }
 }
 
 setBtn.onclick = () => {
     saveTime();
     setTime ();
 }
+
+valueInputMinute.oninput=() => {
+    if(valueInputMinute.value >= 0){
+        removeErrorElement(valueInputMinute);
+    }
+}
+valueInputHour.oninput=() => {
+    if(valueInputHour.value >= 0){
+        removeErrorElement(valueInputHour);
+    }
+}
+
 
 // is alarm:
 alarmMusic.onpause = () => {
@@ -145,3 +168,65 @@ function heandlerAlarmMusic(){
 
 // MODULE-2
 // 
+const calculateBtn = document.querySelector('.module-2__button');
+const elementManyPeople = document.getElementById('many-people');
+const elementBill = document.getElementById('bill-amount');
+const elementOptionBill = document.getElementById('module-2-choose');
+function tipCalculator(){
+    const bill = Number.parseFloat(elementBill.value).toFixed(2);
+    const optionBill = Number.parseFloat(elementOptionBill.value).toFixed(2);
+    const manyPeople = Number.parseFloat(elementManyPeople.value);
+    const tipAmount = document.querySelector('.module-2__tip-about');
+    var tip = "0.00";
+    if(elementBill.value && elementBill.value >0 && elementOptionBill.value != 0){
+        if (isNaN(manyPeople)  || manyPeople === 1) {
+            tip = (bill*optionBill).toFixed(2);
+        }else if(manyPeople <= 0 || !Number.isInteger(manyPeople)) {
+            errorElement(elementManyPeople);
+        }else{
+            tip = ((bill*optionBill) / manyPeople).toFixed(2);
+        }
+        manyPeople>1 ? tipAmount.innerText =  `${tip} $/each`:tipAmount.innerText =  `${tip} $`;
+    }else {
+        if (!elementBill.value || elementBill.value <= 0){
+            errorElement(elementBill);
+        }
+        if (elementOptionBill.value == 0){
+            errorElement(elementOptionBill);
+        }
+        if(manyPeople <= -1) {
+            errorElement(elementManyPeople);
+        }
+    }
+    
+}
+
+function errorElement (element){
+    element.classList.add('active');
+}
+function removeErrorElement (element){
+    element.classList.remove('active');
+}
+calculateBtn.onclick = () => {
+    tipCalculator()
+}
+
+elementManyPeople.oninput = () => {
+    if (elementManyPeople.value >=0) {
+        removeErrorElement(elementManyPeople);
+    }
+}
+
+elementOptionBill.oninput = () => {
+    if (elementOptionBill.value != 0) {
+        removeErrorElement(elementOptionBill);
+    }
+}
+
+elementBill.oninput = () => {
+    if (elementBill.value >0) {
+        removeErrorElement(elementBill);
+    }
+}
+
+
