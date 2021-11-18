@@ -20,8 +20,8 @@
     <div class="grid wide">
         <div class="row">
             <!-- analog-clock -->
-            <div class="modules c-6">
-                <div class="module-1">
+            <div class="modules l-6 m-12 c-12">
+                <div class="module module-1">
                     <!-- head -->
                     <div class="head">
                         <div class="heading">
@@ -91,9 +91,37 @@
                     </div>
                 </div>
             </div>
-            <div class="modules c-6">
-                <div class="module">
-                    a
+            <!-- TIP CALCULATOR -->
+            <div class="modules l-6 m-12 c-12">
+                <div class="module module-2">
+                    <div class="module-2__body">
+                        <h2 class="module-2__head">TIP CALCULATOR</h2>
+                        <label class="module-2__label" for="bill-amount">How much was your bill?</label>
+                        <input autofocus min="0" type="number" class="module-2__input" placeholder="Bill Amount" name="Bill-Amount" id="bill-amount">
+                        <span class="module-2__span">$</span>
+                        <label class="module-2__label" for="module-2-choose">How was your service?</label>
+                        <select class="module-2__select" name="" id="module-2-choose">
+                            <option class="module-2__option" disabled selected value="0">-- Choose an Option --</option>
+                            <option class="module-2__option" value="0.3">30&#37; &#45; Outstanding</option>
+                            <option class="module-2__option" value="0.2">20&#37; &#45; Good</option>
+                            <option class="module-2__option" value="0.15">15&#37; &#45; It was OK</option>
+                            <option class="module-2__option" value="0.1">10&#37; &#45; Bad</option>
+                            <option class="module-2__option" value="0.05">5&#37; &nbsp; &#45; Terrible</option>
+                        </select>
+                        <label class="module-2__label" for="many-people">How many people are sharing the bill?</label>
+                        <input min="0" type="number" class="module-2__input" placeholder="Number of People" name="Bill Amount" id="many-people">
+                        <span class="module-2__span">people</span>
+                        <div class="module-button">Calculate!</div>
+                        <div class="module-2__total">
+                            <div class="module-2__tip-amount">
+                                TIP AMOUNT:
+                            </div>
+                            <div class="module-2__tip-about">
+                                0.00
+                                <i>$</i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

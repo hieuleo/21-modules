@@ -8,7 +8,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    transition: all 0.05s ease;
 }
 
 .modules {
@@ -17,15 +16,21 @@
     padding: 50px 10px;
 }
 
-.module-1 {
+/* clock */
+
+.module{
     justify-content: center;
     padding: 50px 10px;
     border-radius: 20px;
     position: relative;
     user-select: none;
+    min-height: 675px;
+}
+
+.module-1 {
     background-image: url(../img/clock-backg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: 100% 112%;
 }
 .module-1 .heading{
     font-size: 3.8rem;
@@ -103,7 +108,6 @@
     width: 2px;
     height: 46%;
     background-color: red;
-    
 }
 .module-1 .number{
     font-family: 'Oswald', sans-serif;
@@ -185,6 +189,7 @@
     user-select: none;
 }
 .module-1 .set{
+    cursor: pointer;
     background-color: #795548;
     width: 72px;
     height: 24px;
@@ -221,6 +226,7 @@
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     z-index: 20;
+    transition: all 0.1s ease;
 }
 
 .module-1 .alarm-icon.active{
@@ -246,6 +252,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    cursor: pointer;
     margin: 15px;
 }
 
@@ -261,6 +268,7 @@
     transform:translateX(50%);
     font-size: 2.4rem;
     color: #fff;
+    transition: all 0.1s ease;
 }
 
 .module-1 .snooze{ 
@@ -274,9 +282,88 @@
     border-radius:10px;
     padding: 3px 8px;
     line-height: 30px;
+    cursor: pointer;
     height: 40px;
 }
 
 .module-1 .snooze:hover{
     color: rgba(0, 0, 0, 0.555);
+}
+
+/* TIP-CALCULATOR */
+
+.module-2 {
+    background: #000000d9;
+}
+
+.module-2 .module-2__body {
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.module-2 .module-2__head {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: white;
+    background: #000000d9;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.module-2 .module-2__label {
+    font-size: 1.8rem;
+    display: block;
+    padding: 20px 48px;
+    margin-top: 18px;
+}
+
+.module-2 .module-2__input {
+    font-size: 1.5rem;
+    margin: 0 0 0 58px;
+    padding: 5px;
+}
+
+.module-2 .module-2__span {
+    font-size: 1.8rem;
+    margin-left: 5px;
+}
+
+.module-2 .module-2__select {
+    font-size: 1.5rem;
+    margin: 0 58px 0;
+    padding: 5px;
+}
+
+.module-2 .module-button {
+    padding: auto;
+    font-size: 2.1rem;
+    text-transform: uppercase;  
+    font-weight: 700;
+    margin-left: 50%;
+    margin-top: 42px;
+    margin-bottom: 20px;
+    transform:translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.module-2 .module-2__total{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.module-2 .module-2__tip-amount{
+    font-size: 1.8rem;
+    margin: 10px;
+}
+
+.module-2 .module-2__tip-about{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
 }

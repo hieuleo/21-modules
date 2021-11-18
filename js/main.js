@@ -142,3 +142,6 @@ function heandlerAlarmMusic(){
     isAlarm = !isAlarm;
     alarmIcon.classList.toggle('active', isAlarm);
 }
+
+// MODULE-2
+// 
